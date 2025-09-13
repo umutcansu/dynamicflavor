@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "io.github.umutcansu.dynamicflavor"
-version = "1.0.15"
+version = "1.0.1"
 
 repositories {
     google()
@@ -32,7 +32,7 @@ mavenPublishing {
     pom {
         name = "Dynamic Flavor Plugin"
         description = "A Gradle plugin that dynamically creates Android Product Flavors from a JSON source."
-        url = "https://github.com/umutcansu/Resolved-Artifacts-Exporter"
+        url = "https://github.com/umutcansu/dynamicflavor"
         licenses {
             license {
                 name.set("The MIT License")
@@ -47,8 +47,8 @@ mavenPublishing {
             }
         }
         scm {
-            url = "https://github.com/umutcansu/Resolved-Artifacts-Exporter"
-            connection = "scm:git:git://github.com/umutcansu/Resolved-Artifacts-Exporter.git"
+            url = "https://github.com/umutcansu/dynamicflavor"
+            connection = "scm:git:git://github.com/umutcansu/dynamicflavor.git"
         }
     }
 
@@ -56,7 +56,7 @@ mavenPublishing {
 }
 
 mavenPublishing {
-    //publishToMavenCentral(false)
+    publishToMavenCentral(false)
 }
 
 publishing {
