@@ -1,4 +1,4 @@
-## Dynamic Flavor Gradle Plugin
+## Android Dynamic Flavor Gradle Plugin
 Turn Android Product Flavor management from a nightmare into a breeze.
 
 Eliminate the repetitive, hard-to-maintain productFlavor blocks that clutter your build.gradle file. Dynamic Flavor is a powerful Gradle plugin that revolutionizes your Android build process by allowing you to manage your product configurations from a single, centralized JSON source.
