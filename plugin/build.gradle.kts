@@ -8,20 +8,7 @@ plugins {
 }
 
 group = "io.github.umutcansu.dynamicflavor"
-version = "1.0.1"
-
-repositories {
-    google()
-    mavenCentral()
-}
-
-dependencies {
-    implementation(gradleApi())
-
-    implementation("com.android.tools.build:gradle:8.4.1")
-
-    implementation("com.google.code.gson:gson:2.10.1")
-}
+version = "1.0.2"
 
 java {
     withJavadocJar()
@@ -59,20 +46,6 @@ mavenPublishing {
     publishToMavenCentral(false)
 }
 
-publishing {
-    repositories {
-        maven {
-            name = "Nexus"
-            url = uri("http://localhost:8081/repository/maven-releases/")
-            isAllowInsecureProtocol = true
-            credentials {
-                username = project.findProperty("nexusUser") as? String
-                password = project.findProperty("nexusPassword") as? String
-            }
-        }
-    }
-}
-
 gradlePlugin {
     website = "https://github.com/umutcansu"
     vcsUrl = "https://github.com/umutcansu/DynamicFlavor.git"
@@ -87,4 +60,31 @@ gradlePlugin {
 
         }
     }
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "Nexus"
+            url = uri("http://localhost:8081/repository/maven-releases/")
+            isAllowInsecureProtocol = true
+            credentials {
+                username = project.findProperty("nexusUser") as? String
+                password = project.findProperty("nexusPassword") as? String
+            }
+        }
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    implementation(gradleApi())
+
+    implementation("com.android.tools.build:gradle:8.4.1")
+
+    implementation("com.google.code.gson:gson:2.10.1")
 }
